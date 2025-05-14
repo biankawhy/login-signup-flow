@@ -1,4 +1,5 @@
 const fs = require("fs")
+const bcrypt = require("bcrypt")
 
 class UsersComponent {
   constructor(statePath) {
@@ -16,22 +17,31 @@ class UsersComponent {
     fs.writeFileSync(this.statePath, JSON.stringify(this.users, null, 2))
   }
 
-  create(data) {
-    const email = data.email
-    const password = data.password
+  getUser(email) {
+    return this.users[email]
+  }
 
-    this.users.push({ email, password })
+  async create(email, password) {
+    const hash = await bcrypt.hash(password, 10)
+    this.users[email] = {
+      email,
+      hash
+    }
+
     this.serialize()
   }
 
-  login(email, password) {
+  async login(email, password) {
     const user = this.users[email]
-    
-    if (user && user.password === password) {
-      return true
+    if (!user) {
+      return null
     }
 
-    return false
+    if (await bcrypt.compare(password, user.hash)) {
+      return user
+    } else {
+      return null
+    }
   }
 }
 

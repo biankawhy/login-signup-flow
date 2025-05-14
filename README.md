@@ -1,6 +1,6 @@
 # Flusso di Login e Registrazione
 
-Questo repository contiene una implementazione di base di un flusso di login e signup per una applicazione web.
+Questo repository contiene una implementazione di base di un flusso di login e signup` per una applicazione web.
 
 ## Installazione
 
@@ -9,6 +9,14 @@ Questo repository contiene una implementazione di base di un flusso di login e s
     ```bash
     npm install
     ```
+
+2. Valorizzare il file .env
+
+    ```bash
+    cp .env-sample .env
+    ```
+
+    valorizzare le variabili all'interno del file .env
 
 ## Utilizzo
 
@@ -19,4 +27,3 @@ Questo repository contiene una implementazione di base di un flusso di login e s
     ```
 
 2. Apri il tuo browser e naviga a `http://localhost:8080`.
-# login-signup-flow

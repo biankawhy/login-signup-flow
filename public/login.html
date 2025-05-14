@@ -1,19 +1,30 @@
-<!DOCTYPE html>
-<html lang="it">  
-<head>
-    <meta charset="UTF-8">
-    <title>Login</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="login.js"></script> 
-</head>
-<body>
-  <div class="container">
-    <h1>Login</h1>
-    <form action="login" method="post">
-      <input type="email" name="email" placeholder="Email" required="required" />
-      <input type="password" name="password" placeholder="Password" required="required" />
-      <button type="submit" onclick="hashingprova()">Accedi</button>
+<html>
+	<head>
+		<body>
+			<link rel="stylesheet" href="style.css">
+			<script src="login.js"></script>
+			<center>
+				<h1 class = "fade-in">Bentornato!</h1>
+				<p class = "fade-in"> Siamo contenti di rivederti. </p>
+			</center>
+	<form class="floating-form">
+        <h2>Login</h2>
+        <div class="input-group">
+            <input type="email" required>
+            <label>Email Address</label>
+        </div>
+        <div class="input-group">
+            <input type="password" required>
+            <label>Password</label>
+        </div>
+        <button type="submit">Effettua il Login</button>
+		<center>
+		</br>
+			<small>Non hai un account? <a href="signup.html">Registrati</a></small>
+		</center>
+		
     </form>
-    <p>Non sei ancora registrato? <a href="signup">Registrati</a></p>
-  </div>
+</body>
+	</head>
+	
 </html>

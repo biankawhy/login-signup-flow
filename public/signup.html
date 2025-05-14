@@ -1,18 +1,35 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-  <meta charset="UTF-8">
-  <title>Signup</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="container">
-    <h1>Signup</h1>
-    <form action="signup" method="post">
-      <input type="email" name="email" placeholder="Email" required="required" />
-      <input type="password" name="password" placeholder="Password" required="required" />
-      <button type="submit">Registrati</button>
+<html>
+	<head>
+		<body>
+			<link rel="stylesheet" href="style.css">
+			<script src="signup.js"></script>
+			<center>
+				<h1 class = "fade-in">Benvenuto!</h1>
+        <p class = "fade-in">Iscriviti tramite questo form.</p>
+			</center>
+	<form class="floating-form">
+        <h2>Signup</h2>
+        <div class="input-group">
+            <input type="email" required>
+            <label>Email Address</label>
+        </div>
+        <div class="input-group">
+    <input type="password" required pattern=".{5,}" name="pwd1" id = "password"></p>
+            <label>Password</label> 
+        </div>
+                <div class="input-group">
+    <input type="password" required pattern=".{5,}" name="pwdconfirm" id = "confirm_password"></p>
+            <label>Conferma Password</label>
+        </div>
+        <button type="button" onclick = "hashPassword()">Registrati</button>
+
+        <button type="submit">Registrati</button>
+    <center>
+    </br>
+        <small>Hai già un account? <a href="login.html">Accedi</a></small>
+    </center>
     </form>
-    <p>Sei già registrato? <a href="login">Accedi</a></p>
-  </div>
+</body>
+	</head>
+	
 </html>
