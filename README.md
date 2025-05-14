@@ -1,6 +1,6 @@
 # Flusso di Login e Registrazione
 
-Questo repository contiene una implementazione di base di un flusso di login e signup` per una applicazione web.
+Questo repository contiene un esempio di flow login-signup.
 
 ## Installazione
 
